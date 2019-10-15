@@ -1,5 +1,5 @@
 - hosts: mongodb
-  become: true
+  become: True
   tasks:
           - name: install docker
             yum:
