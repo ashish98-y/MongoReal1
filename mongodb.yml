@@ -1,0 +1,29 @@
+- hosts: mongodb
+  become: true
+  tasks:
+          - name: install docker
+            yum:
+                    name: docker
+                    state: present
+          - name: Start and enable docker daemon
+            service:
+                    name: docker
+                    state: started
+                    enabled: True
+          - name: install python
+            yum:
+                    name: python
+                    state: present
+          - name: install python-pip
+            yum:
+                    name: python-pip
+                    state: present
+          - name: install docker-py
+            pip:
+                    name: docker-py
+                    state: present
+          - name: create mongo db
+            docker_container:
+                    name: mongodb
+                    image: mongo:latest
+                
