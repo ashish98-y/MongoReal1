@@ -28,6 +28,6 @@
                     image: mongo:latest
                     network_mode: bridge
                     networks:
-                      - javahome-app
+                      - network_one
                     volumes:
                       - mongodb:/data/db
