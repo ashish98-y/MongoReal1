@@ -22,7 +22,7 @@
             pip:
                     name: docker-py
                     state: present
-           - name: Create a network
+          - name: Create a network
             docker_network:
                     name: network_one
           - name: create mongo db
