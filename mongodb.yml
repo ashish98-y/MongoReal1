@@ -27,6 +27,7 @@
                     name: mongodb
                     image: mongo:latest
                     network_mode: bridge
+                    networks:
+                      - javahome-app
                     volumes:
-                      - /data:/data/testVolume
-                   
+                      - mongodb:/data/db
