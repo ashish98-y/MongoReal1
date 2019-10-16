@@ -26,6 +26,7 @@
             docker_container:
                     name: mongodb
                     image: mongo:latest
+                    network_mode: bridge
                     volumes:
                       - /data:/data/testVolume
                    
