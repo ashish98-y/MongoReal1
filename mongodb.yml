@@ -26,4 +26,6 @@
             docker_container:
                     name: mongodb
                     image: mongo:latest
-                
+                    volumes:
+                      - /data:/data/testVolume
+                   
