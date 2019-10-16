@@ -22,12 +22,15 @@
             pip:
                     name: docker-py
                     state: present
+           - name: Create a network
+            docker_network:
+                    name: network_one
           - name: create mongo db
             docker_container:
                     name: mongodb
                     image: mongo:latest
                     network_mode: bridge
                     networks:
-                      - network_one
+                      - name: network_one
                     volumes:
                       - mongodb:/data/db
