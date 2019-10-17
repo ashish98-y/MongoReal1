@@ -25,6 +25,7 @@
           - name: Create a network
             docker_network:
                     name: network_one
+                    state: present
           - name: create mongo db
             docker_container:
                     name: mongodb
