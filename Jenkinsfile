@@ -1,4 +1,4 @@
-pipelines {
+pipeline {
     stages{
         stage("checkout"){
             steps{
