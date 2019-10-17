@@ -24,7 +24,7 @@
                     state: present
           - name: Create a network
             docker_network:
-                    name: network_one
+                    name: webapp
                     state: present
           - name: create mongo db
             docker_container:
@@ -32,6 +32,6 @@
                     image: mongo:latest
                     network_mode: bridge
                     networks:
-                      - name: network_one
+                      - name: webapp
                     volumes:
                       - mongodb:/data/db
