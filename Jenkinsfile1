@@ -8,7 +8,7 @@ pipeline {
         }
         stage("deploy"){
             steps{
-                sh label: '', script: 'ansible-playbook -i dev.inventory mongodb.yml'
+                ansiblePlaybook inventory: 'dev.inventory', playbook: 'mongodb.yml'
             }
         }
     }
